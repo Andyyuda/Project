@@ -26,5 +26,5 @@ wget -q -O /usr/bin/mbandwith "https://raw.githubusercontent.com/Andyyuda/Projec
 echo -e " [INFO] Update Successfully"
 sleep 2
 rm -f update.sh
-exit
+menu
 
