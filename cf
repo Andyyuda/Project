@@ -7,10 +7,10 @@ apt install jq curl -y
 clear
 
 read -rp "Sub Domain (Contoh: Kmkz001): " -e sub
-DOMAIN=kmkz-devteam.my.id
+DOMAIN=klmpk.my.id
 echo $sub > /root/cfku
-SUB_DOMAIN=${sub}.kmkz-devteam.my.id
-CF_ID=kmkzdevteam@gmail.com
+SUB_DOMAIN=${sub}.klmpk.my.id
+CF_ID=andyyuda41@gmail.com
 CF_KEY=c80e4f3f353e9fab585ec5e66f597f3dd2de8
 echo "rstore-vpn.cloud" > /root/domain
 echo $SUB_DOMAIN > /root/domain
