@@ -175,7 +175,7 @@ clear
 clear
 
 echo -e "${BLUE}┌────────────────────────────────────────────────────────────┐${BLUE}${NC}"
-echo -e "                      << INFORMASI VPS >>                    \E[0m" 
+echo -e " ${BLUE}                     << INFORMASI VPS >>                    \E[0m" 
 echo -e "${BLUE}└────────────────────────────────────────────────────────────┘${BLUE}${NC}"
 echo -e "  ${BLUE}• ${GREEN}Sever Uptime        ${NC}= $( uptime -p  | cut -d " " -f 2-10000 ) "
 echo -e "  ${BLUE}• ${GREEN}Current Time        ${NC}= $( date -d "0 days" +"%d-%m-%Y | %X" )"
@@ -199,7 +199,7 @@ echo -e "${BLUE}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJ
 echo -e "${BLUE}│  \033[0m ${Blue} $ssh1        $vma           $vla          $tra               $ssa   $NC    ${BLUE}│"
 echo -e "${BLUE}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "${BLUE}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "                     << MENU TUNNELING >>                    \E[0m" 
+echo -e " ${BLUE}                    << MENU TUNNELING >>                    \E[0m" 
 echo -e "${BLUE}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "  ${CYAN}[01]${NC} • ${RED}[${NC}${GREEN} SSH MENU ${NC}${RED}]${NC}             ${CYAN}[08]${NC} • ${RED}[${NC}${GREEN} BACKUP MENU ${NC}${RED}]${NC} "
 echo -e "  ${CYAN}[02]${NC} • ${RED}[${NC}${GREEN} VMESS MENU ${NC}${RED}]${NC}           ${CYAN}[09]${NC} • ${RED}[${NC}${GREEN} SETTING MENU${NC}${RED}]${NC}  "
