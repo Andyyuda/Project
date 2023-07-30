@@ -210,7 +210,7 @@ echo -e "  ${CYAN}[06]${NC} • ${RED}[${NC}${GREEN} UPDATE MENU${NC}${RED}]${NC
 echo -e "  ${CYAN}[07]${NC} • ${RED}[${NC}${GREEN} INSTALL UDP ${NC}${RED}]${NC}          ${CYAN}[14]${NC} • ${RED}[${NC}${GREEN} INSTALL UDP GLOBAL ${NC}${RED}]${NC} "
 echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "  ${BLUE}• ${GREEN}Clients Name     ${NC}= ${YELLOW}$Name ${NC}"
-echo -e "  ${BLUE}• ${GREEN}Script Exp       ${NC}= ${YELLOW}$Exp ${NC}${RED}   ${NC}${YELLOW}${NC}"
+echo -e "  ${BLUE}• ${GREEN}Script Exp       ${NC}= ${YELLOW}$Exp ${NC}${RED} $dayleft  ${NC}${YELLOW}${NC}"
 #echo -e "              << SCRIPT MULTIPORT TUNNELING >>                    \E[0m" 
 echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
 echo -e ""
