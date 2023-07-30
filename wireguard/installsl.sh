@@ -13,7 +13,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
 NC='\e[0m'
-echo "Installing SLOWDNS by KMKZ" | lolcat
+echo "Installing SLOWDNS by KLMPK" | lolcat
 echo "Progress..." | lolcat
 sleep 3
 cd
@@ -22,7 +22,7 @@ ns_domain_cloudflare() {
 	DOMAIN=klmpk.my.id
 	DOMAIN_PATH=$(cat /etc/xray/domain)
 	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c7)
-	SUB_DOMAIN=${SUB}.klmpk.my.if
+	SUB_DOMAIN=${SUB}.klmpk.my.id
 	NS_DOMAIN=ns.${SUB_DOMAIN}
 	CF_ID=andyyuda41@gmail.com
         CF_KEY=0d626234700bad388d6d07b49c42901445d1c
