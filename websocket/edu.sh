@@ -17,7 +17,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
 NC='\e[0m'
-echo "Installing SSH WSS by KMKZ" | lolcat
+echo "Installing SSH WSS by Dragon Emperor" | lolcat
 echo "Progress..." | lolcat
 sleep 3
 cd
