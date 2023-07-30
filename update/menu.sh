@@ -198,7 +198,7 @@ case $opt in
 03 | 3) clear ; menu-vless ;;
 04 | 4) clear ; menu-trojan ;;
 05 | 5) clear ; menu-ss ;;
-06 | 6) clear ; wget https://raw.githubusercontent.com/versi01/Project/main/update/update.sh && chmod +x update.sh && ./update.sh ;;
+06 | 6) clear ; wget https://raw.githubusercontent.com/Andyyuda/Project/main/update/update.sh && chmod +x update.sh && ./update.sh ;;
 07 | 7) clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 08 | 8) clear ; menu-backup ;;
 09 | 9) clear ; menu-set ;;
