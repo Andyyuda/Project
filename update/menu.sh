@@ -208,11 +208,11 @@ echo -e "  ${CYAN}[04]${NC} • ${RED}[${NC}${GREEN} TROJAN MENU ${NC}${RED}]${N
 echo -e "  ${CYAN}[05]${NC} • ${RED}[${NC}${GREEN} SSWS MENU ${NC}${RED}]${NC}            ${CYAN}[12]${NC} • ${RED}[${NC}${GREEN} CERT XRAY ${NC}${RED}]${NC}    "
 echo -e "  ${CYAN}[06]${NC} • ${RED}[${NC}${GREEN} UPDATE MENU${NC}${RED}]${NC}           ${CYAN}[13]${NC} • ${RED}[${NC}${GREEN} AUTO REBOOT ${NC}${RED}]${NC}     "
 echo -e "  ${CYAN}[07]${NC} • ${RED}[${NC}${GREEN} INSTALL UDP ${NC}${RED}]${NC}          ${CYAN}[14]${NC} • ${RED}[${NC}${GREEN} INSTALL UDP GLOBAL ${NC}${RED}]${NC} "
-echo -e "$COLOR1┌────────────────────────────────────────────────────────────┐${NC}"
+echo -e "${BLUE}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "  ${BLUE}• ${GREEN}Clients Name     ${NC}= ${YELLOW}$Name ${NC}"
 echo -e "  ${BLUE}• ${GREEN}Script Exp       ${NC}= ${YELLOW}$Exp ${NC}${RED} $dayleft Hari  ${NC}${YELLOW}${NC}"
-#echo -e "              << SCRIPT MULTIPORT TUNNELING >>                    \E[0m" 
-echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
+#echo -e " ${BLUE}            << SCRIPT MULTIPORT TUNNELING >>                    ${BLUE}${NC}" 
+echo -e "${BLUE}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " Select menu : "; read opt
 case $opt in
