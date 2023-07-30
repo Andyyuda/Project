@@ -4,8 +4,8 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 AKUN="AKUN TROJAN"
 TIMES="10"
-CHATID="5067572511"
-KEY="6230067334:AAEADDd9xomAEGW9wr6Z9dwMQwvTrvWGYdM"
+CHATID="5862048483"
+KEY="6307367714:AAG_Gae1CEjB-BDTYLzHSb89kbmLxzln7mk"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 colornow=$(cat /etc/ssnvpn/theme/color.conf)
 NC="\e[0m"
