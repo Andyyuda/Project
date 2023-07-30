@@ -17,7 +17,7 @@ locality=JAKARTA
 organization=Dev
 organizationalunit=Dev
 commonname=none
-email=admin@lawon.biz.id
+email=askykenza0@gmail.com
 
 # simple password minimal
 curl -sS https://raw.githubusercontent.com/Andyyuda/Project/main/ssh/password | openssl aes-256-cbc -d -a -pass pass: wanipiro123 -pbkdf2 > /etc/pam.d/common-password
