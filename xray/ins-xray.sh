@@ -537,8 +537,8 @@ systemctl enable runn
 systemctl restart runn
 
 sleep 1
-wget -q -O /usr/bin/auto-set "https://raw.githubusercontent.com/versi01/Project/main/xray/auto-set.sh" && chmod +x /usr/bin/auto-set 
-wget -q -O /usr/bin/crtxray "https://raw.githubusercontent.com/versi01/Project/main/xray/crt.sh" && chmod +x /usr/bin/crtxray 
+wget -q -O /usr/bin/auto-set "https://raw.githubusercontent.com/Andyyuda/Project/main/xray/auto-set.sh" && chmod +x /usr/bin/auto-set 
+wget -q -O /usr/bin/crtxray "https://raw.githubusercontent.com/Andyyuda/Project/main/xray/crt.sh" && chmod +x /usr/bin/crtxray 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 yellow "xray/Vmess"
