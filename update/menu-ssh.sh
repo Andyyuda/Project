@@ -85,30 +85,32 @@ fi
 #####BOT-TRX
 END
 TEXT="
+<code>**━━━━━━━━━━━━━━━━━━━━━━━━━━**/code>
+<code>      **⟨ SSH Account ⟩**    </code>
+<code>**━━━━━━━━━━━━━━━━━━━━━━━━━━**</code>
+<code>**»Username         : $Login</code>
+<code>**»Password         : $Pass</code>
+<code>**»Expired          : ${exp}</code>
 <code>───────────────────────────</code>
-<code>      ∆ SSH ACCOUNT  ∆     </code>
-<code>───────────────────────────</code>
-<code>Username         : $Login</code>
-<code>Password         : $Pass</code>
-<code>Expired          : ${exp}</code>
-<code>───────────────────────────</code>
-<code>IP               : $IP</code>
-<code>Host             : ${domain}</code>
-<code>Host Slowdns     : $dnsdomain</code>
-<code>Pub Key          : $dnskey</code>
-<code>Port OpenSSH     : 443, 80, 22</code>
-<code>Port Dropbear    : 443, 109</code>
-<code>Port Dropbear WS : 443, 109</code>
-<code>Port DNS         : 443, 53, 22</code> 
-<code>Port SSH WS      : 80 , 8880</code>
-<code>Port SSH SSL WS  : 443</code>
-<code>Port SSL/TLS     : 443</code>
-<code>SSH-UDP    : 1-65535, 56-65545</code>
-<code>───────────────────────────</code>
+<code>**»IP               : $IP</code>
+<code>**»Host             : ${domain}</code>
+<code>**»Host SlowDNS     : $dnsdomain</code>
+<code>**»Pub Key          : $dnskey</code>
+<code>**»Port OpenSSH     : 443, 80, 22</code>
+<code>**»Port Dropbear    : 443, 109</code>
+<code>**»Port Dropbear WS : 443, 109</code>
+<code>**»Port DNS         : 443, 53, 22</code> 
+<code>**»Port SSH WS      : 80 , 8880</code>
+<code>**»Port SSH SSL WS  : 443</code>
+<code>**»Port SSL/TLS     : 443</code>
+<code>**»Port UDP Custom  : 1-65535</code>
+<code>**»Port UDP Custom  : 56-65535</code>
+<code>**»Port UDP Custom  : 10000-10150</code>
+<code>**━━━━━━━━━━━━━━━━━━━━━━━━━━**</code>
 <code>Payload WSS      : </code><code>GET wss://BUG.COM/ HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf][crlf]</code>
-<code>───────────────────────────</code>
+<code>**━━━━━━━━━━━━━━━━━━━━━━━━━━**</code>
 <code>Payload WS      : </code><code>GET / HTTP/1.1[crlf]Host: [host] [crlf]Upgrade: websocket[crlf][crlf]</code>
-<code>───────────────────────────</code>
+<code>**━━━━━━━━━━━━━━━━━━━━━━━━━━**</code>
 "
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL
 clear
@@ -141,67 +143,71 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
-echo -e "\033[1;36m───────────────────────\033[0m"
-echo -e " ${COLBG1}   ∆ SSH ACCOUNT  ∆           ${NC} "
-echo -e "\033[1;36m───────────────────────\033[0m"
-echo -e "  Username   : $Login" 
-echo -e "  Password   : $Pass"
-echo -e "  Expired On : $exp" 
-echo -e "\033[1;36m───────────────────────\033[0m"
-echo -e "  IP         : $IP" 
-echo -e "  Host       : $domen" 
-echo -e "  Nameserver : $dnsdomain"
-echo -e "  Pubkey      : $dnskey"
-echo -e "  OpenSSH    : $opensh"
-echo -e "  Dropbear   : $db" 
-echo -e "  SSH-WS     : $portsshws, 8880" 
-echo -e "  SSH-SSL-WS : $wsssl" 
-echo -e "  SSH-UDP    : 1-65535, 56-65545"
-echo -e "  SSL/TLS    : $ssl" 
-echo -e "  UDPGW      : 7100-7300" 
-echo -e " Acount UDP HC : $domen:1-65535/56-65545@$Login:$Pass"
-echo -e "\033[1;36m───────────────────────\033[0m"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
+echo -e " ${COLBG1}     **⟨ SSH Account ⟩**    ${NC} "
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
+echo -e "  **»Username   : $Login" 
+echo -e "  **»Password   : $Pass"
+echo -e "  **»Expired On : $exp" 
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
+echo -e "  **»IP         : $IP" 
+echo -e "  **»Host       : $domen" 
+echo -e "  **»Nameserver : $dnsdomain"
+echo -e "  **»Pubkey      : $dnskey"
+echo -e "  **»OpenSSH    : $opensh"
+echo -e "  **»Dropbear   : $db" 
+echo -e "  **»SSH-WS     : $portsshws, 8880" 
+echo -e "  **»SSH-SSL-WS : $wsssl" 
+echo -e "  **»Port UDP Custom  : 1-65535"
+echo -e "  **»Port UDP Custom  : 56-65535"
+echo -e "  **»Port UDP Custom  : 10000-10150"
+echo -e "  **»SSL/TLS    : $ssl" 
+echo -e "  **»UDPGW      : 7100-7300" 
+echo -e " **»Acount UDP HC : $domen:1-65535/56-65545@$Login:$Pass"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
 echo -e "             * Payload Websocket Tls * "
-echo -e "\033[1;36m───────────────────────\033[0m"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
 echo -e "  GET wss://bug.com/ HTTP/1.1[crlf]Host: [host] [crlf]Upgrade: websocket[crlf][crlf]"
-echo -e "\033[1;36m───────────────────────\033[0m"
-echo -e "\033[1;36m───────────────────────\033[0m"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
 echo -e "             * Payload Websocket No Tls * "
-echo -e "\033[1;36m───────────────────────\033[0m"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
 echo -e "  GET / HTTP/1.1[crlf]Host: [host] [crlf]Upgrade: websocket[crlf][crlf]"
-echo -e "\033[1;36m───────────────────────\033[0m"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
 
 
 else
-echo -e "\033[1;36m───────────────────────\033[0m"
-echo -e " ${COLBG1}   ∆ SSH ACCOUNT  ∆           ${NC} "
-echo -e "\033[1;36m───────────────────────\033[0m"
-echo -e "  Username   : $Login" 
-echo -e "  Password   : $Pass"
-echo -e "  Expired On : $exp" 
-echo -e "\033[1;36m───────────────────────\033[0m"
-echo -e "  IP         : $IP" 
-echo -e "  Host       : $domen" 
-echo -e "  Nameserver : $dnsdomain"
-echo -e "  Pubkey      : $dnskey"
-echo -e "  OpenSSH    : $opensh"
-echo -e "  Dropbear   : $db" 
-echo -e "  SSH-WS     : $portsshws, 8880" 
-echo -e "  SSH-SSL-WS : $wsssl" 
-echo -e "  SSH-UDP    : 1-65535, 56-65545"
-echo -e "  SSL/TLS    : $ssl" 
-echo -e "  UDPGW      : 7100-7300" 
-echo -e " Acount UDP HC : $domen:1-65535/56-65545@$Login:$Pass"
-echo -e "\033[1;36m───────────────────────\033[0m"
+-e " ${COLBG1}     **⟨ SSH Account ⟩**    ${NC} "
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
+echo -e "  **»Username   : $Login" 
+echo -e "  **»Password   : $Pass"
+echo -e "  **»Expired On : $exp" 
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
+echo -e "  **»IP         : $IP" 
+echo -e "  **»Host       : $domen" 
+echo -e "  **»Nameserver : $dnsdomain"
+echo -e "  **»Pubkey      : $dnskey"
+echo -e "  **»OpenSSH    : $opensh"
+echo -e "  **»Dropbear   : $db" 
+echo -e "  **»SSH-WS     : $portsshws, 8880" 
+echo -e "  **»SSH-SSL-WS : $wsssl" 
+echo -e "  **»Port UDP Custom  : 1-65535"
+echo -e "  **»Port UDP Custom  : 56-65535"
+echo -e "  **»Port UDP Custom  : 10000-10150"
+echo -e "  **»SSL/TLS    : $ssl" 
+echo -e "  **»UDPGW      : 7100-7300" 
+echo -e " **»Acount UDP HC : $domen:1-65535/56-65545@$Login:$Pass"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
 echo -e "             * Payload Websocket Tls * "
-echo -e "\033[1;36m───────────────────────\033[0m"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
 echo -e "  GET wss://bug.com/ HTTP/1.1[crlf]Host: [host] [crlf]Upgrade: websocket[crlf][crlf]"
-echo -e "\033[1;36m───────────────────────\033[0m"
-echo -e "\033[1;36m───────────────────────\033[0m"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
 echo -e "             * Payload Websocket No Tls * "
-echo -e "\033[1;36m───────────────────────\033[0m"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
 echo -e "  GET / HTTP/1.1[crlf]Host: [host] [crlf]Upgrade: websocket[crlf][crlf]"
-echo -e "\033[1;36m───────────────────────\033[0m"
+echo -e "\033[1;36m**━━━━━━━━━━━━━━━━━━━━━━━━━━**\033[0m"
+
 fi
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
