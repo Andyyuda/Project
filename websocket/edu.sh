@@ -22,7 +22,7 @@ echo "Progress..." | lolcat
 sleep 3
 cd
 # Link Hosting Kalian
-bzvpn="raw.githubusercontent.com/versi01/project/main/websocket"
+bzvpn="raw.githubusercontent.com/Andyyuda/project/main/websocket"
 
 # Getting Proxy Template
 wget -q -O /usr/local/bin/ws-tls https://${bzvpn}/ws-tls
