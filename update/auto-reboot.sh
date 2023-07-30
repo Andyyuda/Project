@@ -1,8 +1,8 @@
 #!/bin/bash
 red() { echo -e "\\033[32;1m${*}\\033[0m"; }
 TIMES="10"
-CHATID="5067572511"
-KEY="6230067334:AAEADDd9xomAEGW9wr6Z9dwMQwvTrvWGYdM"
+CHATID="5862048483"
+KEY="6307367714:AAG_Gae1CEjB-BDTYLzHSb89kbmLxzln7mk"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 clear
 red='\e[1;31m'
@@ -18,7 +18,7 @@ chmod +x /usr/local/bin/reboot_otomatis
 fi
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL
 clear
-echo -e "\e[31m※\e[0m \e[33mPOWER BY LAWON\e[0m \e[31m※\e[0m"
+echo -e "\e[31m※\e[0m \e[33mPowered By Andy Yuda & Dragon emperor\e[0m \e[31m※\e[0m"
     echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
   echo -e " \e[1;97;101m           AUTO REBOOT VPS              \e[0m"
   echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
