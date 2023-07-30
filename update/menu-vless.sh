@@ -8,8 +8,8 @@ RED="\033[0;31m"
 COLOR1="\033[1;36m"
 COLBG1="\e[1;97;101m"                 
 ###########- END COLOR CODE -##########
-CHATID="5067572511"
-KEY="6230067334:AAEADDd9xomAEGW9wr6Z9dwMQwvTrvWGYdM"
+CHATID="5862048483"
+KEY="6307367714:AAG_Gae1CEjB-BDTYLzHSb89kbmLxzln7mk"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 function cekvless(){
 clear
