@@ -193,7 +193,7 @@ echo -e "${RED}┌────────────────────�
 echo -e "${BLUE}                     << STATUS SERVICE >>                    ${BLUE}" 
 echo -e "${RED}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "${RED}┌────────────────────────────────────────────────────────────┐${RED}${NC}"
-echo -e "      ${COLOR1}[ SSH Websocket${NC}: ${GREEN}ON ${NC}]  [ NGINX${NC}: ${status_nginx} ] [ XRAY${NC} : ${status_xray} ] "
+echo -e "      ${BLUE}[ SSH Websocket${NC}: ${GREEN}ON ${NC}]  [ NGINX${NC}: ${status_nginx} ] [ XRAY${NC} : ${status_xray} ] "
 echo -e "${RED}└────────────────────────────────────────────────────────────┘${RED}${NC}"
 echo -e "${BLUE}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${BLUE}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  ${BLUE}│"
