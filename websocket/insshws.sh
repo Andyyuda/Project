@@ -21,17 +21,17 @@ echo "Progress..." | lolcat
 sleep 3
 cd
 
-wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/versi01/Project/main/websocket/dropbear-ws.py
-wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/versi01/Project/main/websocket/ws-stunnel
+wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Andyyuda/Project/main/websocket/dropbear-ws.py
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/Andyyuda/Project/main/websocket/ws-stunnel
 
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 
 # Installing Service
-wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/versi01/Project/main/websocket/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
+wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/Andyyuda/Project/main/websocket/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
 
 # Installing Service
-wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/versi01/Project/main/websocket/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
+wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/Andyyuda/Project/main/websocket/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
 
 
 
