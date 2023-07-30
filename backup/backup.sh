@@ -10,7 +10,7 @@ COLBG1="$(cat /etc/ssnvpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ /
 ###########- END COLOR CODE -##########
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/versi01/izinvps/kenjan/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -28,7 +28,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/versi01/izinvps/kenjan/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -45,7 +45,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/versi01/izinvps/kenjan/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -75,7 +75,7 @@ date=$(date +"%Y-%m-%d")
 #itoken=$(curl -sS https://raw.githubusercontent.com/SSHSEDANG4/update/main/asu)
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-NameUser=$(curl -sS https://raw.githubusercontent.com/versi01/izinvps/kenjan/ip | grep $MYIP | awk '{print $2}')
+NameUser=$(curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ip | grep $MYIP | awk '{print $2}')
 
 
 clear
@@ -138,7 +138,7 @@ Save_And_Exit () {
     git add . &> /dev/null
     git commit -m backup &> /dev/null
     git branch -M ipuk &> /dev/null
-    git remote add origin https://github.com/versi01/backup
+    git remote add origin https://github.com/Andyyuda/backup
     git push -f https://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@github.com/versi01/backup.git &> /dev/null
 }
 
@@ -177,7 +177,7 @@ rm -rf /root/user-backup &> /dev/null
 rm -f /root/$NameUser.zip &> /dev/null
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}              • LAWON •                $COLOR1│$NC"
+echo -e "$COLOR1│${NC}              • Andy yuda & Dragon Emperor •                $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo
 read -n 1 -s -r -p "   Press any key to back on menu"
