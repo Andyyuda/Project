@@ -209,6 +209,6 @@ case $opt in
 14) clear ; wget ${BOT}global.sh && chmod +x global.sh && ./global.sh ;;
 999) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
-*) clear ; menu ;;
+*) clear ; exit ;;
 esac
 
