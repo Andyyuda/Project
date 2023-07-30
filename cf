@@ -11,7 +11,7 @@ DOMAIN=klmpk.my.id
 echo $sub > /root/cfku
 SUB_DOMAIN=${sub}.klmpk.my.id
 CF_ID=andyyuda41@gmail.com
-CF_KEY=c80e4f3f353e9fab585ec5e66f597f3dd2de8
+CF_KEY=0d626234700bad388d6d07b49c42901445d1c
 echo "rstore-vpn.cloud" > /root/domain
 echo $SUB_DOMAIN > /root/domain
 
