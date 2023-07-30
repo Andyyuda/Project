@@ -19,13 +19,13 @@ sleep 3
 cd
 
 ns_domain_cloudflare() {
-	DOMAIN=lawon.biz.id
+	DOMAIN=klmpk.my.id
 	DOMAIN_PATH=$(cat /etc/xray/domain)
 	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c7)
-	SUB_DOMAIN=${SUB}.lawon.biz.id
+	SUB_DOMAIN=${SUB}.klmpk.my.if
 	NS_DOMAIN=ns.${SUB_DOMAIN}
-	CF_ID=kmkzdevteam@gmail.com
-        CF_KEY=c80e4f3f353e9fab585ec5e66f597f3dd2de8
+	CF_ID=andyyuda41@gmail.com
+        CF_KEY=0d626234700bad388d6d07b49c42901445d1c
 	set -euo pipefail
 	IP=$(wget -qO- ipinfo.io/ip)
 	echo "Updating DNS NS for ${NS_DOMAIN}..."
