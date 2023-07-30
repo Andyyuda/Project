@@ -1,7 +1,7 @@
 #!/bin/bash
 # =========================================
-BOT="https://raw.githubusercontent.com/versi01/global/main/"
-UPDATE="https://raw.githubusercontent.com/versi01/Project/main/update/update.sh"
+BOT="https://raw.githubusercontent.com/Andyyuda/global/main/"
+UPDATE="https://raw.githubusercontent.com/Andyyuda/Project/main/update/update.sh"
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 ipsaya=$(wget -qO- ipinfo.io/ip)
