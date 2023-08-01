@@ -48,7 +48,5 @@ systemctl restart nginx
 echo -e "[ ${green}INFO${NC} ] All finished... " 
 sleep 0.5
 echo ""
-echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
-echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
