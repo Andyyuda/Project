@@ -215,6 +215,8 @@ echo -e "\033[1;36m────────────────────�
 echo -e " Remarks       : ${user}" 
 echo -e " Expired On    : $exp" 
 echo -e " Domain        : ${domain}" 
+echo -e " Quota         : ${quota}GB" 
+echo -e " Limit ip      : ${limit}user" 
 echo -e " port TLS      : $tls" 
 echo -e " port none TLS : $none" 
 echo -e " id            : ${uuid}"
