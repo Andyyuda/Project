@@ -1,4 +1,4 @@
-
+#!/bin/bash
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
@@ -165,7 +165,7 @@ none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ /
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "  Input Username : " -e user
                 read -rp "  Input Quota : " -e quota
-		read -rp "  Input User limit : " -e limit
+		read -rp "  Input Username : " -e limit
         if [ -z $user ]; then
 echo -e " [Error] Username cannot be empty "
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -218,7 +218,7 @@ echo -e " Remarks       : ${user}"
 echo -e " Expired On    : $exp" 
 echo -e " Domain        : ${domain}" 
 echo -e " Quota         : ${quota}GB" 
-echo -e " Limit ip      : ${limit}user" 
+echo -e " Limit ip      : ${limit} user" 
 echo -e " port TLS      : $tls" 
 echo -e " port none TLS : $none" 
 echo -e " id            : ${uuid}"
@@ -243,25 +243,7 @@ echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vless
 }
-if [ ! -e /etc/vless ]; then
-  mkdir -p /etc/vless
-fi
 
-if [ -z ${Quota} ]; then
-  Quota="0"
-fi
-
-c=$(echo "${quota}" | sed 's/[^0-9]*//g')
-d=$((${c} * 1024 * 1024 * 1024))
-
-if [[ ${c} != "0" ]]; then
-  echo "${d}" >/etc/vless/${user}
-fi
-DATADB=$(cat /etc/vless/.vless.db | grep "^#&" | grep -w "${user}" | awk '{print $2}')
-if [[ "${DATADB}" != '' ]]; then
-  sed -i "/\b${user}\b/d" /etc/vless/.vless.db
-fi
-echo "#& ${user} ${exp} ${uuid}" >>/etc/vless/.vless.db
 
 clear
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -273,7 +255,7 @@ echo -e "\033[1;93m〔⎆〕 ${grenbo}3.${NC} \033[0;36mDelete a Vless Account${
 echo -e "\033[1;93m〔⎆〕 ${grenbo}4.${NC} \033[0;36mCek Login Vless Account${NC}"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
-read -p " Select menu Or 0 Exit:  "  opt
+read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
 01 | 1) clear ; addvless ;;
@@ -283,5 +265,6 @@ case $opt in
 00 | 0) clear ; menu ;;
 *) clear ; menu-vless ;;
 esac
+
 
        
