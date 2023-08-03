@@ -437,7 +437,7 @@ echo -e "\033[1;93m〔⎆〕 ${grenbo}3.${NC} \033[0;36mDelete Vmess Account${NC
 echo -e "\033[1;93m〔⎆〕 ${grenbo}4.${NC} \033[0;36mCheck Vmess Account${NC}"
 #echo -e "\033[1;93m〔⎆〕 ${grenbo}5.${NC} \033[0;36mEdit Quota Vmess${NC}"
 #echo -e "\033[1;93m〔⎆〕 ${grenbo}6.${NC} \033[0;36mEdit Limit user Vmess${NC}"
-echo -e "\033[1;93m〔⎆〕 ${grenbo}0.${NC} \033[0;36m Exit${NC}"
+echo -e  "\033[1;93m〔⎆〕 ${grenbo}0.${NC} \033[0;36m Exit${NC}"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" 
 echo -e ""
 read -p " Select menu :  "  opt
@@ -447,8 +447,6 @@ case $opt in
 02 | 2) clear ; renewvmess ;;
 03 | 3) clear ; delvmess ;;
 04 | 4) clear ; cekvmess ;;
-05 | 5) clear ; editquota ;;
-06 | 6) clear ; editlimit ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-vmess ;;
 esac
