@@ -13,6 +13,107 @@ RED="\033[0;31m"
 COLOR1="\033[1;36m"
 COLBG1="\e[1;97;101m"                      
 ###########- END COLOR CODE -##########
+function editquota(){
+clear
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/vmess/.vmess.db")
+if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
+clear
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "           Edit Quota Vmess          \E[0m"
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+echo "You have no existing clients!"
+echo ""
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
+fi
+clear
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "           Edit Quota Vmess          \E[0m"
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+grep -E "^### " "/etc/vmess/.vmess.db" | cut -d ' ' -f 2 | column -t | sort | uniq
+echo ""
+red "tap enter to go back"
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+read -rp "Input Username : " user
+if [ -z $user ]; then
+menu
+else
+read -p "Limit (Quota): " Quota
+echo -e "$[$Quota * 1024 * 1024 * 1024]" > /etc/vmess/${user}
+clear
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo " VMESS Account Was Successfully Edited"
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+echo " Client Name  : $user"
+echo " Quota Ready  : $Quota GB"
+echo ""
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+fi
+}
+function editlimit(){
+clear
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/vmess/.vmess.db")
+if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
+clear
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "           Edit Limit Vmess          \E[0m"
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+echo "You have no existing clients!"
+echo ""
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
+fi
+clear
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "           Edit Limit Vmess          \E[0m"
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+grep -E "^### " "/etc/vmess/.vmess.db" | cut -d ' ' -f 2 | column -t | sort | uniq
+echo ""
+red "tap enter to go back"
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+read -rp "Input Username : " user
+if [ -z $user ]; then
+menu
+else
+read -p "Limit (IP): " ips
+echo -e "${ips}" > /etc/vmess/limit-ip/${user}
+clear
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo " VMESS Account Was Successfully Edited"
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+echo " Client Name  : $user"
+echo " Limit IP Ready  : $ips IP"
+echo ""
+echo -e "\033[0;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+fi
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function delvmess(){
     clear
@@ -169,6 +270,8 @@ none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ /
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 
 read -rp "   Input Username : " -e user
+read -rp "   Input Quota : " -e quota
+read -rp "   Input limit IP : " -e limit
 read -p "   Owner     : " OWNER
       
 if [ -z $user ]; then
@@ -321,6 +424,8 @@ case $opt in
 02 | 2) clear ; renewvmess ;;
 03 | 3) clear ; delvmess ;;
 04 | 4) clear ; cekvmess ;;
+05 | 5) clear ; editquota ;;
+06 | 6) clear ; editquota ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-vmess ;;
 esac
