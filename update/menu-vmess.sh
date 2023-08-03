@@ -412,7 +412,7 @@ if [ ! -e /etc/vmess ]; then
   mkdir -p /etc/vmess
 fi
 
-if [ -z ${Quota} ]; then
+if [ -z ${quota} ]; then
   Quota="0"
 fi
 
