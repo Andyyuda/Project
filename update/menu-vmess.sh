@@ -408,7 +408,25 @@ echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess
 }
+if [ ! -e /etc/vmess ]; then
+  mkdir -p /etc/vmess
+fi
 
+if [ -z ${Quota} ]; then
+  Quota="0"
+fi
+
+c=$(echo "${Quota}" | sed 's/[^0-9]*//g');
+d=$(( ${c} * 1024*1024*1024 ));
+
+if [[ ${c} != "0" ]]; then
+echo "${d}" > /etc/vmess/${user}
+fi
+DATADB=$(cat /etc/vmess/.vmess.db | grep "^###" | grep -w "${user}" | awk '{print $2}')
+if [[ "${DATADB}" != '' ]]; then
+  sed -i "/\b${user}\b/d" /etc/vmess/.vmess.db
+fi
+echo "### ${user} ${exp} ${uuid}" >>/etc/vmess/.vmess.db
 clear
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \e[1;97;101m          MENU MANAGER VMES           \E[0m"
