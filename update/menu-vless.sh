@@ -8,8 +8,8 @@ RED="\033[0;31m"
 COLOR1="\033[1;36m"
 COLBG1="\e[1;97;101m"                 
 ###########- END COLOR CODE -##########
-CHATID="5862048483"
-KEY="6307367714:AAG_Gae1CEjB-BDTYLzHSb89kbmLxzln7mk"
+CHATID="5067572511"
+KEY="6230067334:AAEADDd9xomAEGW9wr6Z9dwMQwvTrvWGYdM"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 function cekvless(){
 clear
@@ -164,8 +164,6 @@ tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "  Input Username : " -e user
-                read -rp "  Input Quota : " -e quota
-		read -rp "  Input Username : " -e limit
         if [ -z $user ]; then
 echo -e " [Error] Username cannot be empty "
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -217,8 +215,6 @@ echo -e "\033[1;36m────────────────────�
 echo -e " Remarks       : ${user}" 
 echo -e " Expired On    : $exp" 
 echo -e " Domain        : ${domain}" 
-echo -e " Quota         : ${quota}GB" 
-echo -e " Limit ip      : ${limit} user" 
 echo -e " port TLS      : $tls" 
 echo -e " port none TLS : $none" 
 echo -e " id            : ${uuid}"
